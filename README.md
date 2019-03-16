@@ -10,7 +10,7 @@ Get Cloudflare IPs for use in trust proxy configurations.
 
     npm install --save-exact cloudflare-ip-ranges
 
-## Example uage
+## Example usage
 
 For use in an Express environment please see [Express documentation on trust proxies](https://expressjs.com/en/guide/behind-proxies.html).
 
