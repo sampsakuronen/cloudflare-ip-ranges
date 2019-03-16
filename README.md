@@ -1,5 +1,8 @@
 # Cloudflare IP ranges
 
+![npm](https://img.shields.io/npm/v/cloudflare-ip-ranges.svg)
+![npm](https://img.shields.io/npm/dy/cloudflare-ip-ranges.svg)
+
 Get Cloudflare IPs for use in trust proxy configurations.
 
 ## Install
