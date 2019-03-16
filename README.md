@@ -10,7 +10,7 @@ This package will be updated if Cloudflare ever decides to change the endpoints 
 
 ## Install
 
-    npm install --save-exact cloudflare-ip-ranges
+    npm install --save cloudflare-ip-ranges
 
 ## Example usage
 
