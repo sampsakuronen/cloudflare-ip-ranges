@@ -6,6 +6,8 @@
 
 Get Cloudflare IPs for use in trust proxy configurations.
 
+This package will be updated if Cloudflare ever decides to change the endpoints for retrieving current IPs. We will most likely never see a breaking change for this package.
+
 ## Install
 
     npm install --save-exact cloudflare-ip-ranges
@@ -13,6 +15,8 @@ Get Cloudflare IPs for use in trust proxy configurations.
 ## Example usage
 
 For use in an Express environment please see [Express documentation on trust proxies](https://expressjs.com/en/guide/behind-proxies.html).
+
+It is recommended to use `setInterval` for updating the IP list periodically.
 
     const cloudflareIPRanges = require('cloudflare-ip-ranges')
 
