@@ -22,7 +22,6 @@ It is recommended to use `setInterval` for updating the IP list periodically.
 
     cloudflareIPRanges.updateIPs()
       .then((ips) => {
-        Object.keys(ips).forEach((key) => {
-          app.set('trust proxy', ['loopback', ...ips[key]])
-        })
+        const flatIPs = Object.values(ips).reduce((accu, x) => accu.concat(x))
+        app.set('trust proxy', ['loopback', ...flatIPs)
       })
