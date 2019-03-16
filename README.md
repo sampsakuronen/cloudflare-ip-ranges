@@ -30,5 +30,5 @@ It is recommended to use `setInterval` for updating the IP list periodically.
 
     cloudflareIPRanges.updateIPs()
       .then((ips) => {
-        app.set('trust proxy', ['loopback', ...ips)
+        app.set('trust proxy', ['loopback', ...ips])
       })
