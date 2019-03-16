@@ -1,6 +1,6 @@
 {
   "name": "cloudflare-ip-ranges",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get Cloudflare IPs for use in trust proxy configurations",
   "main": "index.js",
   "scripts": {
