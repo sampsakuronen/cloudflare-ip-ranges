@@ -26,7 +26,7 @@ async function getJSON(url) {
   })
 }
 
-function updateIPs() {
+function updateIPs(options = { versioned: false }) {
   return Promise.all(
     Object.keys(CLOUDFLARE_IP_URLS).map(async (key) => {
       return getJSON(CLOUDFLARE_IP_URLS[key])
@@ -39,7 +39,12 @@ function updateIPs() {
       results.forEach(([version, ipSet]) => {
         ips[version] = ipSet
       })
-      return ips
+
+      if (options.versioned) {
+        return ips
+      } else {
+        return Object.values(ips).reduce((accu, x) => accu.concat(x))
+      }
     })
 }
 

@@ -12,6 +12,14 @@ This package will be updated if Cloudflare ever decides to change the endpoints 
 
     npm install --save cloudflare-ip-ranges
 
+## API
+
+    updateIPs({
+      versioned: true // defaults to false
+    })
+
+    By specifying `versioned: true` you get an object that contains `V4` and `V6` separately.
+
 ## Example usage
 
 For use in an Express environment please see [Express documentation on trust proxies](https://expressjs.com/en/guide/behind-proxies.html).
@@ -22,6 +30,5 @@ It is recommended to use `setInterval` for updating the IP list periodically.
 
     cloudflareIPRanges.updateIPs()
       .then((ips) => {
-        const flatIPs = Object.values(ips).reduce((accu, x) => accu.concat(x))
-        app.set('trust proxy', ['loopback', ...flatIPs)
+        app.set('trust proxy', ['loopback', ...ips)
       })
