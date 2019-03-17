@@ -16,23 +16,33 @@ This package will be updated if Cloudflare ever decides to change the endpoints 
 
     npm install --save cloudflare-ip-ranges
 
-## API
-
-By specifying `versioned: true` you get an object that contains `V4` and `V6` separately.
-
-    updateIPs({
-      versioned: true // defaults to false
-    })
-
-## Example usage
+## Usage
 
 For use in an Express environment please see [Express documentation on trust proxies](https://expressjs.com/en/guide/behind-proxies.html).
 
 It is recommended to use `setInterval` for updating the IP list periodically.
 
+#### Directly update trust proxies for an Express app
+
     const cloudflareIPRanges = require('cloudflare-ip-ranges')
 
-    cloudflareIPRanges.updateIPs()
-      .then((ips) => {
-        app.set('trust proxy', ['loopback', ...ips])
-      })
+    updateTrustProxy(app)
+    setInterval(() => {
+      updateTrustProxy(app)
+    }, 1000*60*60*12)
+
+#### Getting a list of IPs and updating trust proxies manually
+
+Useful if you need to list other proxies alongside the Cloudflare ones.
+
+      cloudflareIPRanges.updateIPs()
+        .then((ips) => {
+          app.set('trust proxy', ['loopback', ...ips])
+        })
+
+## API
+
+Method | Info
+------------ | -------------
+updateIPs | By default returns `Promise<string[]>`. By specifying `{ versioned: true }` as an argument you get an object that contains `V4` and `V6` separately (`Promise<{ V4: string[], V6: string[] }>`).
+updateTrustProxy | Takes an Express app instance as an argument. Returns `Promise<void>`.

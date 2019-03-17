@@ -48,6 +48,14 @@ function updateIPs(options = { versioned: false }) {
     })
 }
 
+function updateTrustProxy(expressApp) {
+  return updateIPs()
+    .then((ips) => {
+      expressApp.set('trust proxy', ['loopback', ...ips])
+    })
+}
+
 module.exports = {
-  updateIPs
+  updateIPs,
+  updateTrustProxy
 }
