@@ -4,7 +4,7 @@
 ![npm](https://img.shields.io/npm/dy/cloudflare-ip-ranges.svg)
 ![Travis (.org)](https://img.shields.io/travis/sampsakuronen/cloudflare-ip-ranges.svg)
 
-Get Cloudflare IPs for use in trust proxy configurations.
+Get Cloudflare IPs for use in trust proxy configurations. You might also be interested in [Cloudflare authenticated origin pulls](https://support.cloudflare.com/hc/en-us/articles/204899617-Authenticated-Origin-Pulls).
 
 This package will be updated if Cloudflare ever decides to change the endpoints for retrieving current IPs. We will most likely never see a breaking change for this package.
 
