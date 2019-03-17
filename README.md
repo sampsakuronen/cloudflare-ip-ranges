@@ -8,6 +8,8 @@ Get Cloudflare IPs for use in trust proxy configurations.
 
 This package will be updated if Cloudflare ever decides to change the endpoints for retrieving current IPs. We will most likely never see a breaking change for this package.
 
+![Cloudflare IP ranges](README-image.png?raw=true)
+
 ## Install
 
     npm install --save cloudflare-ip-ranges
