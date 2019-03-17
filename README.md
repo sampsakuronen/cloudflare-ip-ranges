@@ -46,3 +46,12 @@ Method | Info
 ------------ | -------------
 updateIPs | By default returns `Promise<string[]>`. By specifying `{ versioned: true }` as an argument you get an object that contains `V4` and `V6` separately (`Promise<{ V4: string[], V6: string[] }>`).
 updateTrustProxy | Takes an Express app instance as an argument. Returns `Promise<void>`.
+
+## Changelog
+
+Version | Release notes
+------------ | -------------
+2.1.0 | Adds the possibility of directly updating trust proxies for an Express app using `updateTrustProxy`.
+2.0.0 | Change default behavior of `updateIPs` into returning a flat list of IPs.
+1.0.1 | Add info to documentation about using `setInterval` for keeping the IPs fresh.
+1.0.0 | Initial release.
