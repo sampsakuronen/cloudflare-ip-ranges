@@ -14,11 +14,11 @@ This package will be updated if Cloudflare ever decides to change the endpoints 
 
 ## API
 
+By specifying `versioned: true` you get an object that contains `V4` and `V6` separately.
+
     updateIPs({
       versioned: true // defaults to false
     })
-
-    By specifying `versioned: true` you get an object that contains `V4` and `V6` separately.
 
 ## Example usage
 
