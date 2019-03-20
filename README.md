@@ -1,9 +1,9 @@
 # Cloudflare IP ranges
 
 [![npm](https://img.shields.io/npm/v/cloudflare-ip-ranges.svg?style=flat-square)](https://www.npmjs.com/package/cloudflare-ip-ranges)
-![npm](https://img.shields.io/npm/dy/cloudflare-ip-ranges.svg?style=flat-square)
-![Dependents (via libraries.io)](https://img.shields.io/librariesio/dependents/npm/cloudflare-ip-ranges.svg?style=flat-square)
 [![Travis (.org)](https://img.shields.io/travis/sampsakuronen/cloudflare-ip-ranges.svg?style=flat-square)](https://travis-ci.org/sampsakuronen/cloudflare-ip-ranges)
+![npm](https://img.shields.io/npm/dm/cloudflare-ip-ranges.svg?style=flat-square)
+![Dependents (via libraries.io)](https://img.shields.io/librariesio/dependents/npm/cloudflare-ip-ranges.svg?style=flat-square)
 
 Get Cloudflare IPs for use in trust proxy configurations. You might also be interested in [Cloudflare authenticated origin pulls](https://support.cloudflare.com/hc/en-us/articles/204899617-Authenticated-Origin-Pulls).
 
