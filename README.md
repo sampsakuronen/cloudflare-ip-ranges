@@ -28,21 +28,24 @@ It is recommended to use `setInterval` for updating the IP list periodically.
 
 #### Directly update trust proxies for an Express app
 
-    const cloudflareIPRanges = require('cloudflare-ip-ranges')
+    const cfIPranges = require('cloudflare-ip-ranges')
 
-    updateTrustProxy(app)
+    cfIPranges.updateTrustProxy(app)
+    
     setInterval(() => {
-      updateTrustProxy(app)
+      cfIPranges.updateTrustProxy(app)
     }, 1000*60*60*12)
 
 #### Getting a list of IPs and updating trust proxies manually
 
 Useful if you need to list other proxies alongside the Cloudflare ones.
 
-      cloudflareIPRanges.updateIPs()
-        .then((ips) => {
-          app.set('trust proxy', ['loopback', ...ips])
-        })
+    const cfIPranges = require('cloudflare-ip-ranges')
+    
+    cfIPranges.updateIPs()
+      .then((ips) => {
+        app.set('trust proxy', ['loopback', ...ips])
+      })
 
 ## API
 
