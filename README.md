@@ -1,7 +1,7 @@
 # Cloudflare IP ranges
 
 [![npm](https://img.shields.io/npm/v/cloudflare-ip-ranges.svg?style=flat-square)](https://www.npmjs.com/package/cloudflare-ip-ranges)
-[![Travis (.org)](https://img.shields.io/travis/sampsakuronen/cloudflare-ip-ranges.svg?style=flat-square)](https://travis-ci.org/sampsakuronen/cloudflare-ip-ranges)
+[![CircleCI (all branches)](https://img.shields.io/circleci/project/github/sampsakuronen/cloudflare-ip-ranges.svg?style=flat-square)](https://circleci.com/gh/sampsakuronen/cloudflare-ip-ranges)
 ![npm](https://img.shields.io/npm/dm/cloudflare-ip-ranges.svg?style=flat-square)
 ![Dependents (via libraries.io)](https://img.shields.io/librariesio/dependents/npm/cloudflare-ip-ranges.svg?style=flat-square)
 
@@ -15,6 +15,8 @@ This package will be updated if Cloudflare ever decides to change the endpoints 
 </p>
 
 ## Install
+
+Requires node `7` or newer.
 
     npm install --save cloudflare-ip-ranges
 
